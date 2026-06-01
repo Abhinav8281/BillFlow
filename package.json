@@ -5,7 +5,7 @@
   "workspaces": [
     "client"
   ],
-  "description": "BillFlow - Smart Invoice and GST Manager built with the MERN stack.",
+  "description": "BillFlow - Smart Invoice and GST Manager .",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server/index.js",

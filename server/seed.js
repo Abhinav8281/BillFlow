@@ -43,7 +43,7 @@ function daysFromNow(days) {
 }
 
 async function seed() {
-  const uri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/billflow";
+  const uri = process.env.MONGO_URI || "mongodb+srv://root:1234@cluster1.vxrjkx1.mongodb.net/billflow";
   await mongoose.connect(uri);
   await Client.deleteMany();
   await Invoice.deleteMany();
@@ -68,7 +68,7 @@ async function seed() {
       client: createdClients[1]._id,
       issueDate: daysFromNow(-10),
       dueDate: daysFromNow(20),
-      sellerState: "Maharashtra",
+      sellerState: "kerala",
       placeOfSupply: "Karnataka",
       status: "sent",
       items: [
@@ -80,7 +80,7 @@ async function seed() {
       client: createdClients[2]._id,
       issueDate: daysFromNow(-35),
       dueDate: daysFromNow(-5),
-      sellerState: "Maharashtra",
+      sellerState: "kerala",
       placeOfSupply: "Gujarat",
       status: "overdue",
       items: [
